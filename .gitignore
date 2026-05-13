@@ -1,0 +1,7 @@
+*.xlsx
+*.xlsb
+data/
+literature/
+Model/*.xlsx
+Model/Model documents/*.xlsx
+presentation/

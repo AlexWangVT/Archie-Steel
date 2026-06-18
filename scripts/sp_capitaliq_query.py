@@ -8,20 +8,20 @@ logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 log = logging.getLogger(__name__)
 
 # --- Configuration ---
-EXCEL_PATH   = Path(r"D:\projects\Archie_Steel\data\SPGlobalCaptialQ\SPGlobal_Export - Copy.xlsx")
+EXCEL_PATH   = Path(r"D:\projects\Archie Copper\sp_capital_iq_copper.xls")
 SHEET_NAME   = "Sheet1"
-PROP_ID_COL  = 2        # Column A (adjust if needed)
-OUTPUT_COL   = 7        # Column E
+PROP_ID_COL  = 2        # Column B (adjust if needed)
+OUTPUT_COL   = 7        
 HEADER_ROW   = 2
 
 DATASET_ID   = "243327"
 YEAR         = "2025Y"
-PRODUCT_TYPE = "Concentrate"
+# PRODUCT_TYPE = "Concentrate"
 DATA_ITEM    = "PROP_NAME"
 
 
 def main() -> None:
-    SNL_ADDIN = r"C:\Program Files (x86)\SNL Financial\SNLxl\SNLXLAddin.xla"
+    SNL_ADDIN = r"C:\Program Files\SNL Financial\SNLxl\SNLXLAddin.xla"
 
     app = xw.App(visible=True)
     app.api.Workbooks.Open(SNL_ADDIN)  # load SNL add-in so SNLData is recognized
